@@ -18,6 +18,38 @@
     height: 0;
     z-index: 3;
   }
+
+  #love-message {
+    display: none; /* Oculto inicialmente */
+    position: absolute; /* Permite posicionar encima del sobre */
+    top: 50%; /* Centrado verticalmente respecto a la pantalla */
+    left: 50%; /* Centrado horizontalmente respecto a la pantalla */
+    transform: translate(-50%, -50%); /* Ajusta la posición al centro exacto */
+    text-align: center;
+    font-size: 24px; /* Tamaño de letra */
+    color: #D00000; /* Color rojo intenso */
+    font-weight: bold;
+    background-color: #fff0f0; /* Fondo suave */
+    padding: 20px 30px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    z-index: 10; /* Encima de los elementos del sobre */
+    animation: fadeInScale 0.5s ease-out; /* Animación de entrada */
+}
+
+/* Animación personalizada para el mensaje */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
   
   .flap {
     border-left: 140px solid transparent;
