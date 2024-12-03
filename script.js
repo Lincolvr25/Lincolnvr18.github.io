@@ -17,10 +17,14 @@ $( document ).ready(function() {
     function open() {
         envelope.addClass("open")
            .removeClass("close");
+
+           $('#love-message').fadeIn(500);
     }
     function close() {
         envelope.addClass("close")
            .removeClass("open");
+
+           $('#love-message').fadeOut(500); 
     }
    
 });
